@@ -23,9 +23,12 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/nprogress/nprogress.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/nprogress/nprogress.js"
+            ]
           },
           "configurations": {
             "production": {
