@@ -15,11 +15,20 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.load()
+  }
+  load(){
     NProgress.start()
     this._contactService.get().subscribe(data=>{
       this.contacts=data
       console.log(this.contacts)
       NProgress.done()
+    })
+  }
+  delete(key: string){
+    this._contactService.delete(key).subscribe(resp=>{
+      this._contactService.message("Contacto eliminado")
+      this.load()
     })
   }
 

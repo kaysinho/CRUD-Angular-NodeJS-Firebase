@@ -8,6 +8,8 @@ import { NewComponent } from './new/new.component';
 import { ListComponent } from './list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { KeysFirebasePipe } from './pipes/keys-firebase.pipe';
+import { UpdateComponent } from './update/update.component';
+import { ContactService } from './contact.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { KeysFirebasePipe } from './pipes/keys-firebase.pipe';
     NavbarComponent,
     NewComponent,
     ListComponent,
-    KeysFirebasePipe
+    KeysFirebasePipe,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { KeysFirebasePipe } from './pipes/keys-firebase.pipe';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

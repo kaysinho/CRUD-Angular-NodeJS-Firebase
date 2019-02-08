@@ -17,4 +17,5 @@ export class NewComponent implements OnInit {
   save(){
     this._contactService.save(this.contact)
   }
+
 }

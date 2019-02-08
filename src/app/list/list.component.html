@@ -11,9 +11,8 @@
       <div class="card-body">
         <h5 class="card-title">{{ contacts[key].name}}</h5>
         <p class="card-text">Phone: {{contacts[key].cellPhone}}</p>
-        <a href="#" class="btn btn-primary">Editar</a>
-        <a href="#" class="btn btn-success">Llamar</a>
-        <a href="#" class="btn btn-warning">Mensaje</a>
+        <a [routerLink]="['/update', key]" class="btn btn-primary">Editar</a>
+        <button href="#" class="btn btn-danger" (click)="delete(key)">Eliminar</button>
       </div>
     </div>
   </div>

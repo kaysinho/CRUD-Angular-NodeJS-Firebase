@@ -13,19 +13,22 @@
       <input type="email" [(ngModel)]="contact.email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
     </div>
   </div>
-  <div class="form-check">
-    <input class="form-check-input" [value]="genre" [(ngModel)]="contact.genre"  type="radio" name="exampleRadios" id="exampleRadios1"
-      value="option1" checked>
-    <label class="form-check-label" for="exampleRadios1">
-      Masculino
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" [value]="genre" [(ngModel)]="contact.genre"  type="radio" name="exampleRadios" id="exampleRadios2"
-      value="option2">
-    <label class="form-check-label" for="exampleRadios2">
-      Femenino
-    </label>
+  <div class="form-group">
+
+    <div class="form-check">
+      <input class="form-check-input" [value]="1" [(ngModel)]="contact.genre"  type="radio" name="male" id="exampleRadios1"
+        value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Masculino
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" [value]="0" [(ngModel)]="contact.genre"  type="radio" name="female" id="exampleRadios2"
+        value="option2">
+      <label class="form-check-label" for="exampleRadios2">
+        Femenino
+      </label>
+    </div>
   </div>
   <div class="row">
     <button type="submit" class="btn btn-primary" (click)="save()">Guardar</button>
