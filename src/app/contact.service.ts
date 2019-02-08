@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators'
 import { Contact } from './contact';
 import { HttpClient } from '@angular/common/http';
 
@@ -9,7 +8,7 @@ declare var Swal: any;
   providedIn: 'root'
 })
 export class ContactService {
-  URL:string = 'https://cursos-b0929.firebaseio.com/contactos.json'
+  URL:string = '/contactos.json'
   
   constructor(private http : HttpClient) { }
   
